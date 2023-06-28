@@ -1,6 +1,5 @@
 pipeline{
-   
-    agent any
+       agent any
     
 tools {
   maven 'm1'
@@ -16,6 +15,11 @@ stages {
       maven 'm1'
     }
   }
+stage('validate'){
+steps{
+sh 'mvn validate'
+}
+}
 
   stage('test') {
     steps {
