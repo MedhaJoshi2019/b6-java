@@ -9,7 +9,6 @@ stages {
         
       sh 'mvn clean install'
     }
-
     tools {
       maven 'm1'
     }
