@@ -1,15 +1,14 @@
 pipeline{
-   
-    agent any
-    
-tools {
+       agent any
+    tools {
   maven 'm1'
 }
 stages {
   stage('install') {
-    steps { git branch: 'main', url: 'https://github.com/MedhaJoshi2019/b6-java.git'
-        
-      sh 'mvn install'
+    steps 
+{
+git branch: 'main', url: 'https://github.com/MedhaJoshi2019/b6-java.git'
+sh 'mvn install'
     }
 
     tools {
