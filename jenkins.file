@@ -5,11 +5,10 @@ pipeline{
 }
 stages {
 stage('install')
-{
-    steps {
+{steps {
 git branch: 'main', url: 'https://github.com/MedhaJoshi2019/b6-java.git'
-        
-      sh 'mvn install'
+           sh 'mvn install'
+sh'output'
     }
 
     tools {
