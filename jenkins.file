@@ -7,9 +7,8 @@ stages {
   stage('install') {
     steps { git branch: 'main', url: 'https://github.com/MedhaJoshi2019/b6-java.git'
         
-      sh 'mvn install'
+      sh 'mvn clean install'
     }
-
     tools {
       maven 'm1'
     }
